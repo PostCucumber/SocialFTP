@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/company/create/', 'CompanyController@create')->name('company.create');
 Route::post('/company/', 'CompanyController@store')->name('company.store');
+Route::get('/{id}/upload/', 'FileController@create')->name('file.create');

@@ -30,4 +30,3 @@ $factory->define(App\Company::class, function (Faker\Generator $faker) {
         'name' => $faker->company,
     ];
 });
-

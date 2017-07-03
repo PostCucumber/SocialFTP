@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\File;
+use App\User;
 use Illuminate\Http\Request;
 
 class FileController extends Controller
@@ -22,9 +23,10 @@ class FileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $userID = User::find($id);
+        return view('files.create', compact('userID'));
     }
 
     /**
